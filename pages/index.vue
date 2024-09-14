@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import { SunMoon, ArrowUpRight } from "lucide-vue-next";
+import { SunMoon, ArrowUpRight, Home, MoonStar } from "lucide-vue-next";
 
 // Trạng thái dark mode
 const isDarkMode = ref(false);
@@ -22,9 +22,8 @@ function toggleDarkMode() {
                 <nav class="mx-auto flex max-w-[700px] items-center justify-between gap-3 px-4 py-3 md:px-6"
                     aria-label="Global">
                     <div class="flex lg:flex-1">
-                        <a href="#" class="-m-1.5 p-1.5">
-                            <img class="h-8 w-auto"
-                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+                        <a href="/" class="-m-1.5 p-1.5">
+                            <Home/>
                         </a>
                     </div>
                     <div class="">
@@ -35,7 +34,7 @@ function toggleDarkMode() {
                     </div>
                     <div class="lg:flex lg:flex-1 lg:justify-end">
                         <button @click="toggleDarkMode" class="">
-                            <SunMoon />
+                            <MoonStar />
                         </button>
                     </div>
                 </nav>
@@ -45,7 +44,7 @@ function toggleDarkMode() {
             <main class="mx-auto max-w-[700px] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
                 <div class="introduction ">
                     <h3 class="font-bold mb-3 dark:text-white">@Junior | Coder & Holding</h3>
-                    <p class="mt-6 dark:text-customLightText">I am a coder, holding crypto and a student of NEU!</p>
+                    <p class="mt-6 dark:text-customLightText">I am a software engineer who builds for the web with a design-oriented approach. In addition to coding, I make YouTube videos, where I focus on tech, and productivity.I am a coder, holding crypto and a student of NEU!</p>
                     <div class="flex mt-3">
                         <a href="https://github.com/juniordev203"
                             class="mr-5 pl-2 pr-1 py-0 rounded-3xl bg-gray-400 dark:bg-gray-700 flex">Github
