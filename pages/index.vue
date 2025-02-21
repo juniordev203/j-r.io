@@ -1,107 +1,98 @@
-<script setup>
-import { ref } from 'vue';
-import { SunMoon, ArrowUpRight, Home, MoonStar } from "lucide-vue-next";
-
-// Trạng thái dark mode
-const isDarkMode = ref(false);
-
-function toggleDarkMode() {
-  isDarkMode.value = !isDarkMode.value;
-  if (isDarkMode.value) {
-    document.documentElement.classList.add('dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-  }
-}
-</script>
-
 <template>
-    <div class="min-h-screen overflow-hidden font-mono bg-white dark:bg-customDark text-gray-900 dark:text-customDarkText">
-        <div class="">
-            <header class="md:mt-6">
-                <nav class="mx-auto flex max-w-[700px] items-center justify-between gap-3 px-4 py-3 md:px-6"
-                    aria-label="Global">
-                    <div class="flex lg:flex-1">
-                        <a href="/" class="-m-1.5 p-1.5">
-                            <Home/>
-                        </a>
-                    </div>
-                    <div class="">
-                        <a href="#" class="text-base font-semibold leading-6 text-gray-900 dark:text-white">Home</a>
-                        <a href="#" class="text-base font-semibold leading-6 text-gray-900 dark:text-white mx-6">Blog</a>
-                        <a href="#" class="text-base font-semibold leading-6 text-gray-900 dark:text-white mr-6">Contact</a>
-                        <a href="#" class="text-base font-semibold leading-6 text-gray-900 dark:text-white">Skills</a>
-                    </div>
-                    <div class="lg:flex lg:flex-1 lg:justify-end">
-                        <button @click="toggleDarkMode" class="">
-                            <MoonStar />
-                        </button>
-                    </div>
-                </nav>
-            </header>
+  <div class="flex justify-center pb-48">
+    <main class="">
+      <!-- introduce -->
+      <div class="introduction mb-11">
+        <h3 class="text-4xl font-extrabold mb-3 text-gray-900 dark:text-white">@Junior203</h3>
+        <p class="mb-6">Fullstack Developer & Crypto Holding</p>
+        <p class="mb-6 dark:text-customLightText">I am a software engineer who builds for the web with a
+          design-oriented approach. In addition to coding, I make YouTube videos, where I focus on tech,
+          and productivity. <span class="italic">I am a coder, holding crypto and a student of NEU!</span>
+        </p>
+        <div class="flex gap-6">
+          <div class="" v-for="(data) in media" :key="index">
+            <a :href="data.link"
+              class="flex px-4 py-2 rounded-md bg-gray-200 text-lg text-gray-900 font-semibold dark:bg-gray-500 dark:text-white hover:scale-105 hover:bg-gray-300 shadow-lg">{{
+                data.text }}
+              <ArrowUpRight class="w-4 h-5 dark:text-white" />
+            </a>
+          </div>
         </div>
-        <div class="flex justify-center">
-            <main class="mx-auto max-w-[700px] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
-                <div class="introduction ">
-                    <h3 class="font-bold mb-3 dark:text-white">@Junior | Coder & Holding</h3>
-                    <p class="mt-6 dark:text-customLightText">I am a software engineer who builds for the web with a design-oriented approach. In addition to coding, I make YouTube videos, where I focus on tech, and productivity.I am a coder, holding crypto and a student of NEU!</p>
-                    <div class="flex mt-3">
-                        <a href="https://github.com/juniordev203"
-                            class="mr-5 pl-2 pr-1 py-0 rounded-3xl bg-gray-400 dark:bg-gray-700 flex">Github
-                            <ArrowUpRight class="w-4 h-5 dark:text-white" />
-                        </a>
-                        <a href="https://www.facebook.com/huyhoang203.phh/"
-                            class="mr-5 pl-2 pr-1 py-0 rounded-3xl bg-gray-400 dark:bg-gray-700 flex">Facebook
-                            <ArrowUpRight class="w-4 h-5 dark:text-white" />
-                        </a>
-                        <a href="https://www.instagram.com/huyhoang_p03/"
-                            class="mr-5 pl-2 pr-1 py-0 rounded-3xl bg-gray-400 dark:bg-gray-700 flex">Instagram
-                            <ArrowUpRight class="w-4 h-5 dark:text-white" />
-                        </a>
-                        <a href="https://x.com/_junior203_"
-                            class="mr-5 pl-2 pr-1 py-0 rounded-3xl bg-gray-400 dark:bg-gray-700 flex">Twitter
-                            <ArrowUpRight class="w-4 h-5 dark:text-white" />
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="mt-10 mb-3 dark:text-white">Pinned Project</h3>
-                    <div class="columns-3">
-                        <div>
-                            <img class="rounded-xl w-64 h-32 object-cover" src="/assets/images/netflix.png" alt="">
-                            <h3 class="dark:text-white">Netflix</h3>
-                            <div class="flex items-end">
-                                <p class="dark:text-white">Link:</p>
-                                <a class="ml-1 underline dark:text-customLightText" href="https://www.instagram.com/huyhoang_p03/">junior.com</a>
-                            </div>
-                        </div>
-                        <div>
-                            <img class="rounded-xl w-64 h-32" src="/assets/images/angular.jpg" alt="">
-                            <h3 class="dark:text-white">Profile Management</h3>
-                            <div class="flex items-end">
-                                <p class="dark:text-white">Link: </p>
-                                <a class="ml-1 underline dark:text-customLightText" href="https://www.instagram.com/huyhoang_p03/">junior.com</a>
-                            </div>
-                        </div>
-                        <div>
-                            <img class="rounded-xl w-64 h-32" src="/assets/images/nike.png" alt="">
-                            <h3 class="dark:text-white">Nike</h3>
-                            <div class="flex items-end">
-                                <p class="dark:text-white">Link: </p>
-                                <a class="ml-1 underline dark:text-customLightText" href="https://www.instagram.com/huyhoang_p03/">junior.com</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-10">
-                    <div class="flex dark:text-white">
-                        <h3>Blog</h3>
-                        <ArrowUpRight class="dark:text-white" />
-                    </div>
-                    <p class="dark:text-customLightText">I occasionally write about programming, productivity, and more.
-                        Check me out and follow to stay up to date.</p>
-                </div>
-            </main>
+      </div>
+      <!-- project -->
+      <div class="mb-11">
+        <div class="flex text-lg text-gray-900 dark:text-white mb-3">
+          <h3>Project</h3>
+          <ArrowUpRight class="dark:text-white" />
         </div>
-    </div>
+        <div class="grid grid-cols-2 gap-6">
+          <div class="">
+            <NuxtLink to="https://www.testbank.vn/">
+              <div class="w-[320px] h-[180px] overflow-hidden rounded-md mb-2 hover:scale-105">
+                <img class="w-full h-full object-fit" src="/assets/images/testbank.vn.png" alt="">
+              </div>
+            </NuxtLink>
+            <NuxtLink to="https://www.testbank.vn/">
+              <h3 class="text-lg font-semibold italic dark:text-white ">Testbank.vn</h3>
+            </NuxtLink>
+            <p class="">Leading educational products for training from grade 6 to grade 12</p>
+          </div>
+          <div class="">
+            <NuxtLink to="https://www.testbank.vn/">
+              <div class="w-[320px] h-[180px] overflow-hidden rounded-md mb-2 hover:scale-105">
+                <img class="w-full h-full object-fit" src="/assets/images/netflix.png" alt="">
+              </div>
+            </NuxtLink>
+            <NuxtLink to="https://www.testbank.vn/">
+              <h3 class="text-lg font-semibold italic dark:text-white ">Netflix.com</h3>
+            </NuxtLink>
+            <p class="">Leading educational products for training from grade 6 to grade 12</p>
+          </div>
+          <div class="">
+            <NuxtLink to="https://www.testbank.vn/">
+              <div class="w-[320px] h-[180px] overflow-hidden rounded-md mb-2 hover:scale-105">
+                <img class="w-full h-full object-fit" src="/assets/images/nike.png" alt="">
+              </div>
+            </NuxtLink>
+            <NuxtLink to="https://www.testbank.vn/">
+              <h3 class="text-lg font-semibold italic dark:text-white ">Nike Website</h3>
+            </NuxtLink>
+            <p class="">Nike shoe sales system is developed by flask python</p>
+          </div>
+        </div>
+      </div>
+      <!-- blog -->
+      <div class="">
+        <div class="flex text-lg text-gray-900 dark:text-white mb-2">
+          <h3>Blog</h3>
+          <ArrowUpRight class="dark:text-white" />
+        </div>
+        <p class="dark:text-customLightText">I occasionally write about programming, productivity, and more.
+          Check me out and follow to stay up to date.</p>
+      </div>
+    </main>
+  </div>
 </template>
+<script setup>
+import { ArrowUpRight } from "lucide-vue-next";
+
+const media = [
+  {
+    link: 'https://github.com/juniordev203',
+    text: 'Github'
+  },
+  {
+    link: 'https://www.facebook.com/huyhoang203.phh/',
+    text: 'Facebook'
+  },
+  {
+    link: 'https://www.instagram.com/huyhoang_p03/',
+    text: 'Instagram'
+  },
+  {
+    link: 'https://x.com/_junior203_',
+    text: 'Twitter'
+  },
+]
+
+</script>
