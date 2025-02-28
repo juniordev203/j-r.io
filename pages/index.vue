@@ -28,38 +28,16 @@
           <ArrowUpRight class="w-4 h-5 dark:text-white text-gray-500" />
         </div>
         <div class="grid grid-cols-2 gap-6">
-          <div class="">
-            <NuxtLink to="https://www.testbank.vn/">
-              <div class="w-[320px] h-[180px] overflow-hidden rounded-md mb-2 hover:scale-105">
-                <img class="w-full h-full object-fit" src="/assets/images/testbank.vn.png" alt="">
+          <div class="flex flex-col gap-2" v-for="(data) in project" :key="index">
+            <a :href="data.link">
+              <div class="p-2 w-full h-48 rounded-md overflow-hidden">
+                <img class="w-full h-full object-cover" :src="data.image" alt="" />
               </div>
-            </NuxtLink>
-            <NuxtLink to="https://www.testbank.vn/">
-              <h3 class="text-lg text-gray-900 font-medium dark:text-white ">Testbank.vn</h3>
-            </NuxtLink>
-            <p class="">Leading educational tech for training from grade 6 to grade 12</p>
-          </div>
-          <div class="">
-            <NuxtLink to="https://www.testbank.vn/">
-              <div class="w-[320px] h-[180px] overflow-hidden rounded-md mb-2 hover:scale-105">
-                <img class="w-full h-full object-fit" src="/assets/images/netflix.png" alt="">
+              <div class="flex flex-col gap-1">
+                <p class="text-gray-900 dark:text-white font-medium">{{ data.title }}</p>
+                <p class="text-gray-700 dark:text-gray-300">{{ data.description }}</p>
               </div>
-            </NuxtLink>
-            <NuxtLink to="https://www.testbank.vn/">
-              <h3 class="text-lg text-gray-900 font-medium dark:text-white ">Netflix.com</h3>
-            </NuxtLink>
-            <p class="">Leading educational tech for training from grade 6 to grade 12</p>
-          </div>
-          <div class="">
-            <NuxtLink to="https://www.testbank.vn/">
-              <div class="w-[320px] h-[180px] overflow-hidden rounded-md mb-2 hover:scale-105">
-                <img class="w-full h-full object-fit" src="/assets/images/nike.png" alt="">
-              </div>
-            </NuxtLink>
-            <NuxtLink to="https://www.testbank.vn/">
-              <h3 class="text-lg text-gray-900 font-medium dark:text-white ">Nike Website</h3>
-            </NuxtLink>
-            <p class="">Nike shoe sales system is developed by flask python</p>
+            </a>
           </div>
         </div>
       </div>
@@ -81,19 +59,39 @@ import { ArrowUpRight } from "lucide-vue-next";
 const media = [
   {
     link: 'https://github.com/juniordev203',
-    text: 'Github'
+    text: 'Git'
   },
   {
     link: 'https://www.facebook.com/huyhoang203.phh/',
-    text: 'Facebook'
+    text: 'Meta'
   },
   {
     link: 'https://www.instagram.com/huyhoang_p03/',
-    text: 'Instagram'
+    text: 'IG'
   },
   {
     link: 'https://x.com/_junior203_',
-    text: 'Twitter'
+    text: 'X'
+  },
+]
+const project = [
+  {
+    link: 'https://www.testbank.vn/',
+    title: 'Testbank.vn',
+    description: 'Leading educational tech for training from grade 6 to grade 12',
+    image: '/_nuxt/assets/images/testbank.vn.png'
+  },
+  {
+    link: 'https://github.com/juniordev203/netflix-project.io',
+    title: 'Netflix.com',
+    description: 'Remake Netflix interface with HTML and CSS',
+    image: '/_nuxt/assets/images/netflix.png'
+  },
+  {
+    link: 'https://github.com/juniordev203/nike.io',
+    title: 'Nike Website',
+    description: 'Nike shoe sales system is developed by flask python',
+    image: '/_nuxt/assets/images/nike.png'
   },
 ]
 

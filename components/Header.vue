@@ -7,7 +7,12 @@
                 </NuxtLink>
             </div>
             <div class="flex gap-3 font-light leading-6 dark:text-white">
-                <NuxtLink v-for="(data) in navMenu" :key="data.router" :to="{name: data.router}" active-class="!boder-black bg-gray-100 dark:bg-black" class="px-3 py-1 dark:hover:bg-black rounded-md">
+                <NuxtLink 
+                v-for="(data) in navMenu" 
+                :key="data.router" 
+                :to="{name: data.router}" 
+                active-class="!boder-black bg-gray-100 dark:bg-gray-800" 
+                class="px-3 py-1 rounded-md">
                         <span>{{ data.text }}</span>
                 </NuxtLink>
             </div>

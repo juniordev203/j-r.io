@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+  <div class="min-h-screen text-gray-900 dark:text-white">
     <div class="p-2 flex flex-col gap-12 mb-16">
       <!-- introduce -->
       <div class="flex flex-col gap-2">
@@ -50,21 +50,27 @@
             <ArrowUpRight class="w-4 h-5 text-gray-500 dark:text-white" />
           </div>
           <p class="text-gray-700 dark:text-gray-300">
-            Please send good ideas including an article about technology, design, program, work and your life for me!
+            Please send good ideas including an article about technology,
+            design, program, work and your life for me!
           </p>
         </div>
         <div class="">
-          <form class="p-6 border rounded-lg shadow-md bg-white dark:bg-gray-800 dark:border-gray-700">
+          <form class="p-6 border rounded-lg shadow-md dark:border-gray-700">
             <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Your name!</label>
             <input type="text"
-              class="w-full p-2 border rounded-md mb-4 bg-gray-100 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
+              class="w-full p-2 border rounded-md mb-4 bg-gray-100 dark:bg-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
               placeholder="Enter your name.." />
             <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Your idea || post</label>
-            <textarea class="w-full p-2 border rounded-md bg-gray-100 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400"
+            <textarea
+              class="w-full p-2 border rounded-md bg-gray-100 dark:bg-black dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400"
               rows="4" placeholder="Enter what you want.."></textarea>
-            <button type="submit" class="mt-4 bg-indigo-500 text-white p-2 rounded-md hover:bg-indigo-600">
-              Submit
-            </button>
+            <div class="flex mt-2">
+              <button type="submit"
+                class="px-2 py-1.5 flex items-center gap-x-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600">
+                Send
+                <Send class="w-4 h-4" />
+              </button>
+            </div>
           </form>
         </div>
       </div>
@@ -73,5 +79,5 @@
 </template>
 
 <script setup>
-import { ArrowUpRight } from "lucide-vue-next";
+import { ArrowUpRight, Send } from "lucide-vue-next";
 </script>

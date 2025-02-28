@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen">
-    <div class="p-2 max-w-4xl flex flex-col gap-6 bg-white dark:bg-black overflow-hidden mb-16">
+    <div class="p-2 max-w-4xl flex flex-col gap-12 overflow-hidden mb-16">
       <!-- Header -->
       <div class="relative">
         <div class="flex flex-col gap-4">
@@ -33,7 +33,7 @@
           <div class="flex flex-col gap-3">
             <div class="flex flex-col gap-2 text-center">
               <h1 class="text-xl text-black dark:text-white font-medium uppercase ">Carrer goal</h1>
-              <el-divider class="m-0 border-gray-500 border-[1.5px]"/>
+              <el-divider class="!m-0 border-gray-500 border-[1.5px]"/>
             </div>  
             <ul class="list-disc list-inside">
               <li>Apply the knowledge learned into practice, working according to my passion. Desire to find a suitable job and develop.</li>
@@ -42,6 +42,7 @@
           </div>      
         </div>
       </div>
+
       <div class="">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Left Column -->
