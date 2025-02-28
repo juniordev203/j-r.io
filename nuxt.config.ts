@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', 'nuxt-icon'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', 'nuxt-icon', '@element-plus/nuxt'
+],
   app: {
     head: {
       link: [
