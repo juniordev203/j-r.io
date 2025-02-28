@@ -36,8 +36,8 @@ const navMenu = ref([
         text: "Blog"
     },
     {
-        router: "products",
-        text: "Products"
+        router: "tech",
+        text: "Tech"
     },
 
 ])

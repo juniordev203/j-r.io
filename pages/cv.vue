@@ -1,8 +1,8 @@
 <template>
-  <div class="min-h-screen bg-gray-50">
+  <div class="min-h-screen">
     <div class="p-2 max-w-4xl flex flex-col gap-6 bg-white dark:bg-black overflow-hidden mb-16">
       <!-- Header -->
-      <div class="relative bg-gradient-to-r">
+      <div class="relative">
         <div class="flex flex-col gap-4">
           <div class="p-5 flex flex-col gap-4 text-center text-black dark:text-white border-2 border-black dark:border-white">
             <h1 class="text-5xl font-medium tracking-wider">PHAM HUY HOANG</h1>
@@ -39,9 +39,7 @@
               <li>Apply the knowledge learned into practice, working according to my passion. Desire to find a suitable job and develop.</li>
               <li>A dynamic, hard-working and diligent person at work. During the internship, trying to accumulate knowledge and skills, with the goal of becoming an official employee of the company.</li>
             </ul>
-          </div>
-          
-          
+          </div>      
         </div>
       </div>
       <div class="">
@@ -106,8 +104,7 @@
                 </div>
               </div>
             </div>
-          </div>
-          
+          </div>  
           <!-- Right Column -->
           <div class="md:col-span-2 flex flex-row gap-2">
             <div class="w-fit h-full">
@@ -156,7 +153,7 @@
                       </div>
                       <p class="text-sm text-gray-700 dark:text-gray-300 mb-1"><span class="font-medium">Position:</span> Fullstack Developer</p>
                       <p class="text-sm text-gray-700 dark:text-gray-300 mb-1"><span class="font-medium">Members:</span> 3</p>
-                      <p class="text-sm text-gray-700 dark:text-gray-300"><span class="font-medium">Functions:</span> Search, add products to cart, update, add or remove products in cart</p>
+                      <p class="text-sm text-gray-700 dark:text-gray-300"><span class="font-medium">Functions:</span> Search, add tech to cart, update, add or remove tech in cart</p>
                     </div>
                   </div>
                   

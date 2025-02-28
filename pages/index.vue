@@ -1,11 +1,13 @@
 <template>
-  <div class="flex justify-center min-h-screen">
-    <div class="p-2 flex flex-col gap-8 mb-16">
+  <div class="min-h-screen">
+    <div class="p-2 flex flex-col gap-12 mb-16">
       <!-- introduce -->
-      <div class="">
-        <h1 class="text-3xl font-medium mb-3 text-gray-900 dark:text-white">Hi, Juniordev here!</h1>
-        <p class="mb-6">Fullstack Developer & Crypto Holding</p>
-        <p class="mb-6 dark:text-customLightText">I am a software engineer who builds for the web with a
+      <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-2">
+          <h1 class="text-3xl font-medium text-gray-900 dark:text-white">Hi, Juniordev here!</h1>
+          <p class="">Fullstack Developer & Crypto Holding</p>
+        </div>
+        <p class="dark:text-customLightText">I am a software engineer who builds for the web with a
           design-oriented approach. In addition to coding, I make YouTube videos, where I focus on tech,
           and productivity. <span class="">I am a coder, holding crypto and a student of NEU!</span>
         </p>
@@ -19,7 +21,6 @@
           </div>
         </div>
       </div>
-
       <!-- project -->
       <div class="">
         <div class="flex dark:text-white mb-3">
@@ -36,7 +37,7 @@
             <NuxtLink to="https://www.testbank.vn/">
               <h3 class="text-lg text-gray-900 font-medium dark:text-white ">Testbank.vn</h3>
             </NuxtLink>
-            <p class="">Leading educational products for training from grade 6 to grade 12</p>
+            <p class="">Leading educational tech for training from grade 6 to grade 12</p>
           </div>
           <div class="">
             <NuxtLink to="https://www.testbank.vn/">
@@ -47,7 +48,7 @@
             <NuxtLink to="https://www.testbank.vn/">
               <h3 class="text-lg text-gray-900 font-medium dark:text-white ">Netflix.com</h3>
             </NuxtLink>
-            <p class="">Leading educational products for training from grade 6 to grade 12</p>
+            <p class="">Leading educational tech for training from grade 6 to grade 12</p>
           </div>
           <div class="">
             <NuxtLink to="https://www.testbank.vn/">
