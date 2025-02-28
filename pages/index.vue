@@ -55,6 +55,9 @@
 </template>
 <script setup>
 import { ArrowUpRight } from "lucide-vue-next";
+import testbankImg from '../assets/images/testbank.vn.png'
+import netflixImg from '../assets/images/netflix.png'
+import nikeImg from '../assets/images/nike.png'
 
 const media = [
   {
@@ -79,19 +82,19 @@ const project = [
     link: 'https://www.testbank.vn/',
     title: 'Testbank.vn',
     description: 'Leading educational tech for training from grade 6 to grade 12',
-    image: '/_nuxt/assets/images/testbank.vn.png'
+    image: testbankImg
   },
   {
     link: 'https://github.com/juniordev203/netflix-project.io',
     title: 'Netflix.com',
     description: 'Remake Netflix interface with HTML and CSS',
-    image: '/_nuxt/assets/images/netflix.png'
+    image: netflixImg
   },
   {
     link: 'https://github.com/juniordev203/nike.io',
     title: 'Nike Website',
     description: 'Nike shoe sales system is developed by flask python',
-    image: '/_nuxt/assets/images/nike.png'
+    image: nikeImg
   },
 ]
 
