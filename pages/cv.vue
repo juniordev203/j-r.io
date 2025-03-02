@@ -4,9 +4,9 @@
       <!-- Header -->
       <div class="relative">
         <div class="flex flex-col gap-4">
-          <div class="p-5 flex flex-col gap-4 text-center text-black dark:text-white border-2 border-black dark:border-white">
-            <h1 class="text-5xl font-medium tracking-wider">PHAM HUY HOANG</h1>
-            <p class="text-xl font-medium">Frontend Developer</p>
+          <div class="p-5 flex flex-col gap-4 text-center  border-2 border-black dark:border-white">
+            <h1 class="text-5xl text-black dark:text-gray-100 font-medium tracking-wider">PHAM HUY HOANG</h1>
+            <p class="text-xl text-black dark:text-gray-100 font-medium">Frontend Developer</p>
           </div>
           <div class="flex flex-wrap justify-center gap-4">
             <div class="flex items-center mb-2">
@@ -32,7 +32,7 @@
           </div>
           <div class="flex flex-col gap-3">
             <div class="flex flex-col gap-2 text-center">
-              <h1 class="text-xl text-black dark:text-white font-medium uppercase ">Carrer goal</h1>
+              <h1 class="text-xl text-black dark:text-gray-100 font-medium uppercase ">Carrer goal</h1>
               <el-divider class="!m-0 border-gray-500 border-[1.5px]"/>
             </div>  
             <ul class="list-disc list-inside">
@@ -48,25 +48,25 @@
           <!-- Left Column -->
           <div class="md:col-span-1">
             <div class="mb-8">
-              <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
+              <h2 class="text-xl font-bold   mb-4 flex items-center">
                 <BookOpenIcon class="w-5 h-5 mr-2 text-indigo-600 dark:text-indigo-400" />
                 EDUCATION
               </h2>
-              <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-                <h3 class="font-medium text-gray-900 dark:text-white">INFORMATION TECHNOLOGY</h3>
+              <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                <h3 class="font-medium">INFORMATION TECHNOLOGY</h3>
                 <p class="text-gray-700 dark:text-gray-300 mb-1">NATIONAL ECONOMICS UNIVERSITY</p>
                 <p class="text-gray-500 dark:text-gray-400 text-sm">2021 - 2025</p>
               </div>
             </div>
             
             <div>
-              <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
+              <h2 class="text-xl font-bold   mb-4 flex items-center">
                 <WrenchIcon class="w-5 h-5 mr-2 text-indigo-600 dark:text-indigo-400" />
                 SKILLS
               </h2>
               <div class="space-y-3">
                 <div>
-                  <p class="font-medium text-gray-800 dark:text-white mb-1">FrontEnd Web</p>
+                  <p class="font-medium   mb-1">FrontEnd Web</p>
                   <div class="flex flex-wrap gap-2">
                     <span class="px-3 py-1 bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 rounded-full text-sm">VueJs</span>
                     <span class="px-3 py-1 bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 rounded-full text-sm">Angular</span>
@@ -75,7 +75,7 @@
                 </div>
                 
                 <div>
-                  <p class="font-medium text-gray-800 dark:text-white mb-1">BackEnd</p>
+                  <p class="font-medium   mb-1">BackEnd</p>
                   <div class="flex flex-wrap gap-2">
                     <span class="px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded-full text-sm">.NET core</span>
                     <span class="px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded-full text-sm">NodeJs</span>
@@ -84,23 +84,23 @@
                 </div>
                 
                 <div>
-                  <p class="font-medium text-gray-800 dark:text-white mb-1">Mobile</p>
+                  <p class="font-medium   mb-1">Mobile</p>
                   <div class="flex flex-wrap gap-2">
                     <span class="px-3 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 rounded-full text-sm">React Native</span>
                   </div>
                 </div>
                 
                 <div>
-                  <p class="font-medium text-gray-800 dark:text-white mb-1">Other</p>
+                  <p class="font-medium   mb-1">Other</p>
                   <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200 rounded-full text-sm">Java</span>
-                    <span class="px-3 py-1 bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200 rounded-full text-sm">C#</span>
-                    <span class="px-3 py-1 bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200 rounded-full text-sm">MySQL</span>
+                    <span class="px-3 py-1 bg-gray-100  dark:bg-gray-800 rounded-full text-sm">Java</span>
+                    <span class="px-3 py-1 bg-gray-100  dark:bg-gray-800 rounded-full text-sm">C#</span>
+                    <span class="px-3 py-1 bg-gray-100  dark:bg-gray-800 rounded-full text-sm">MySQL</span>
                   </div>
                 </div>
                 
                 <div>
-                  <p class="font-medium text-gray-800 dark:text-white mb-1">Language</p>
+                  <p class="font-medium   mb-1">Language</p>
                   <p class="text-gray-600 dark:text-gray-400 text-sm">English: Read and understand basic English documents</p>
                 </div>
               </div>
@@ -113,36 +113,34 @@
             </div>
             <div class="">
               <div class="mb-8">
-                <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
+                <h2 class="text-xl font-bold  mb-4 flex items-center">
                   <BriefcaseIcon class="w-5 h-5 mr-2 text-indigo-600 dark:text-indigo-400" />
                   WORK EXPERIENCE
                 </h2>
                 
                 <div class="space-y-6">
                   <div class="border-l-2 border-indigo-500 pl-4 ml-2">
-                    <h3 class="font-medium text-gray-900 dark:text-white">FRONTEND DEVELOPER</h3>
+                    <h3 class="font-medium">FRONTEND DEVELOPER</h3>
                     <p class="text-gray-700 dark:text-gray-300">OUTSOURCE TEAM</p>
                     <p class="text-gray-500 dark:text-gray-400 text-sm mb-2">4/2024 - Present</p>
                   </div>
                   
                   <div class="border-l-2 border-indigo-500 pl-4 ml-2">
-                    <h3 class="font-medium text-gray-900 dark:text-white">FRONTEND DEVELOPER</h3>
+                    <h3 class="font-medium  ">FRONTEND DEVELOPER</h3>
                     <p class="text-gray-700 dark:text-gray-300">THIEN HA XANH EDUCATIONAL TECHNOLOGY COMPANY</p>
                     <p class="text-gray-500 dark:text-gray-400 text-sm mb-2">10/2024 - 12/2024</p>
                   </div>
                 </div>
               </div>
-              
               <div>
-                <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
+                <h2 class="text-xl font-bold   mb-4 flex items-center">
                   <CodeIcon class="w-5 h-5 mr-2 text-indigo-600 dark:text-indigo-400" />
                   PROJECT INVOLVED
-                </h2>
-                
+                </h2>      
                 <div class="space-y-8">
-                  <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                  <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                     <div class="flex justify-between items-center mb-2">
-                      <h3 class="font-medium text-gray-900 dark:text-white">SHOES WEBSITE</h3>
+                      <h3 class="font-medium  ">SHOES WEBSITE</h3>
                       <span class="text-sm text-gray-500 dark:text-gray-400">9/2023 - 11/2023</span>
                     </div>
                     <div class="mb-3">
@@ -158,9 +156,9 @@
                     </div>
                   </div>
                   
-                  <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                  <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                     <div class="flex justify-between items-center mb-2">
-                      <h3 class="font-medium text-gray-900 dark:text-white">CHINESE LEARNING APPLICATION</h3>
+                      <h3 class="font-medium  ">CHINESE LEARNING APPLICATION</h3>
                       <span class="text-sm text-gray-500 dark:text-gray-400">2/2024 - 4/2024</span>
                     </div>
                     <div class="mb-3">
@@ -174,9 +172,9 @@
                     </div>
                   </div>
                   
-                  <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                  <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                     <div class="flex justify-between items-center mb-2">
-                      <h3 class="font-medium text-gray-900 dark:text-white">WEBSITE ENROLLMENT MANAGEMENT</h3>
+                      <h3 class="font-medium  ">WEBSITE ENROLLMENT MANAGEMENT</h3>
                       <span class="text-sm text-gray-500 dark:text-gray-400">4/2024 - 8/2024</span>
                     </div>
                     <div class="mb-3">

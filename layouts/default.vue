@@ -1,5 +1,5 @@
 <template>
-  <div class="text-gray-600 dark:bg-customDark dark:text-white background-main text-sm font-light">
+  <div class="text-gray-700 dark:bg-customDark dark:text-gray-100 background-main text-sm font-light">
     <div class="mx-auto max-w-[700px] min-h-screen overflow-hidden">
       <Header />
       <div class="page-container">

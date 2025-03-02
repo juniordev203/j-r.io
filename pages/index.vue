@@ -1,10 +1,10 @@
 <template>
   <div class="min-h-screen">
-    <div class="p-2 flex flex-col gap-12 mb-16">
+    <div class="p-2 max-w-4xl flex flex-col gap-12 overflow-hidden mb-16">
       <!-- introduce -->
       <div class="flex flex-col gap-8">
         <div class="flex flex-col gap-2">
-          <h1 class="text-3xl font-medium text-gray-900 dark:text-white">Hi, Juniordev here!</h1>
+          <h1 class="text-3xl text-black dark:text-gray-100 font-medium  ">Hi, Juniordev here!</h1>
           <p class="">Fullstack Developer & Crypto Holding</p>
         </div>
         <p class="dark:text-customLightText">I am a software engineer who builds for the web with a
@@ -14,18 +14,18 @@
         <div class="flex gap-6">
           <div class="" v-for="(data) in media" :key="index">
             <a :href="data.link"
-              class="flex px-4 py-2 rounded-full bg-gray-100 text-gray-700 dark:bg-black dark:text-white hover:scale-110 hover:bg-gray-300 shadow">{{
+              class="flex px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800  hover:scale-110 hover:bg-gray-300 shadow">{{
                 data.text }}
-              <ArrowUpRight class="w-4 h-5 dark:text-white text-gray-500" />
+              <ArrowUpRight class="w-4 h-5  text-gray-500" />
             </a>
           </div>
         </div>
       </div>
       <!-- project -->
       <div class="">
-        <div class="flex dark:text-white mb-3">
+        <div class="flex  mb-3">
           <p>Project</p>
-          <ArrowUpRight class="w-4 h-5 dark:text-white text-gray-500" />
+          <ArrowUpRight class="w-4 h-5  text-gray-500" />
         </div>
         <div class="grid grid-cols-2 gap-6">
           <div class="flex flex-col gap-2" v-for="(data) in project" :key="index">
@@ -34,7 +34,7 @@
                 <img class="w-full h-full object-cover" :src="data.image" alt="" />
               </div>
               <div class="flex flex-col gap-1">
-                <p class="text-gray-900 dark:text-white font-medium">{{ data.title }}</p>
+                <p class="  font-medium">{{ data.title }}</p>
                 <p class="text-gray-700 dark:text-gray-300">{{ data.description }}</p>
               </div>
             </a>
@@ -43,9 +43,9 @@
       </div>
       <!-- blog -->
       <div class="">
-        <div class="flex dark:text-white mb-2">
+        <div class="flex  mb-2">
           <p>Blog</p>
-          <ArrowUpRight class="w-4 h-5 dark:text-white text-gray-500" />
+          <ArrowUpRight class="w-4 h-5  text-gray-500" />
         </div>
         <p class="dark:text-customLightText">I occasionally write about programming, productivity, and more.
           Check me out and follow to stay up to date.</p>
