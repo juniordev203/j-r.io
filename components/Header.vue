@@ -1,61 +1,35 @@
 <template>
-    <div class="mb-11 text-sm">
-        <nav class="flex mx-auto max-w-[720px] items-center justify-between gap-3 py-12" aria-label="Global">
-            <div class="p-1 hover:bg-gray-100 dark:hover:bg-black rounded-md">
-                <NuxtLink to="/">
-                    <Home class="w-5 h-5 font-light"/>
-                </NuxtLink>
-            </div>
-            <div class="flex gap-3 font-light leading-6">
-                <NuxtLink 
-                v-for="(data) in navMenu" 
-                :key="data.router" 
-                :to="{name: data.router}" 
-                active-class="!boder-black bg-gray-100 dark:bg-gray-800" 
-                class="px-3 py-1 rounded-md">
-                        <span>{{ data.text }}</span>
-                </NuxtLink>
-            </div>
-            <div class="p-1 hover:bg-gray-100 dark:hover:bg-black rounded-md cursor-pointer" @click="toggleDarkMode">
-                <MoonStar class="w-5 h-5 font-light"/>
-            </div>
-        </nav>
+    <div class="mb-12 text-sm" data-aos="fade-down" data-aos-duration="800">
+      <nav class="flex mx-auto max-w-[720px] items-center justify-center gap-6 py-8 px-4" aria-label="Global">
+        <!-- Navigation Menu -->
+        <div class="flex gap-2 font-medium leading-6">
+          <NuxtLink
+            v-for="(data) in navMenu"
+            :key="data.router"
+            :to="{ name: data.router }"
+            active-class="bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md"
+            class="px-4 py-2 rounded-full text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+          >
+            <span>{{ data.text }}</span>
+          </NuxtLink>
+        </div>
+      </nav>
     </div>
-</template>
-
-<script lang="ts" setup>
-import { Home, MoonStar } from "lucide-vue-next"
-const router = useRouter();
-
-const navMenu = ref([
+  </template>
+  
+  <script lang="ts" setup>
+  const navMenu = ref([
     {
-        router: "index",
-        text: "Home"
+      router: 'index',
+      text: 'Home',
     },
     {
-        router: "cv",
-        text: "CV"
+      router: 'cv',
+      text: 'CV',
     },
-    {
-        router: "blog",
-        text: "Blog"
-    },
-    {
-        router: "tech",
-        text: "Tech"
-    },
-
-])
-const isDarkMode = ref(false);
-
-function toggleDarkMode() {
-    isDarkMode.value = !isDarkMode.value;
-    if (isDarkMode.value) {
-        document.documentElement.classList.add("dark");
-    } else {
-        document.documentElement.classList.remove("dark");
-    }
-}
-</script>
-
-<style></style>
+  ]);
+  </script>
+  
+  <style scoped>
+  /* Optional: Add custom gradient for active state if needed */
+  </style>
