@@ -24,9 +24,9 @@
 
       <!-- Project -->
       <div data-aos="fade-up" data-aos-delay="100" class="flex flex-col gap-2">
-        <div class="flex items-center">
-          <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100">Projects</h2>
-          <ArrowUpRight class="w-6 h-6 ml-2 text-gray-500" />
+        <div class="flex items-center gap-2">
+          <Bookmark class="w-7 h-7 text-purple-500 fill-purple-500 dark:text-gray-100"/>
+          <h2 class="text-3xl font-bold text-purple-500 dark:text-gray-100">Projects</h2>
         </div>
         <div class="flex flex-col gap-1">
           <a v-for="(data, index) in project" :key="index" :href="data.link" target="_blank" rel="noopener noreferrer"
@@ -43,11 +43,14 @@
       <!-- Blog -->
       <div class="flex flex-col gap-8" data-aos="fade-up" data-aos-delay="200">
         <div class="flex flex-col gap-3">
-          <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Blog</h1>
+          <div class="flex items-center gap-2">
+            <Bookmark class="w-7 h-7 text-purple-500 fill-purple-500 dark:text-gray-100"/>
+            <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Blog</h1>
+          </div>
           <p class="text-gray-600 dark:text-gray-400">Stay tuned for my posts!</p>
         </div>
         <div class="flex flex-col gap-2">
-          <div v-for="n in 3" :key="n" class="flex gap-2 justify-between items-end rounded-lg bg-white dark:bg-gray-800 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-gray-700 dark:hover:to-gray-600 transform hover:-translate-y-1 transition-all duration-300">
+          <div v-for="n in 3" :key="n" class="p-2 flex gap-2 justify-between items-end rounded-lg bg-slate-50 cursor-pointer dark:bg-gray-800 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-gray-700 dark:hover:to-gray-600 transform hover:-translate-y-1 transition-all duration-300">
             <div class="flex flex-col justify-center gap-2">
               <p class="text-gray-600 dark:text-gray-400">Apr 27, 2024</p>
               <p class="font-semibold text-gray-800 dark:text-gray-200">Add beautiful maps to your React app with MapBox GL</p>
@@ -55,26 +58,22 @@
             <SquarePen class="w-5 h-5 text-blue-600 dark:text-gray-300"/>
           </div>
         </div>
-        <div class="flex flex-col gap-6">
-          <div class="flex items-center">
-            <p class="text-2xl font-semibold text-gray-800 dark:text-gray-100">New post</p>
-            <ArrowUpRight class="w-5 h-5 ml-2 text-gray-500" />
-          </div>
-          <p class="text-gray-700 dark:text-gray-400">
-            Please send good ideas including an article about technology, design, program, work, and your life for me!
-          </p>
-        </div>
       </div>
 
       <!-- Technologies & Tools -->
       <div class="flex flex-col gap-8" data-aos="fade-up" data-aos-delay="300">
         <div class="flex flex-col gap-3">
-          <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Technologies & Tools</h1>
+          <div class="flex items-center gap-2">
+            <Bookmark class="w-7 h-7 text-purple-500 fill-purple-500 dark:text-gray-100"/>
+            <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Technologies & Tools</h1>
+          </div>
           <p class="text-lg text-gray-700 dark:text-gray-400">Here are some of the technologies and tools I use</p>
         </div>
         <!-- Technologies -->
         <div class="flex flex-col gap-6">
-          <h2 class="text-3xl font-semibold text-gray-800 dark:text-gray-100">Technologies</h2>
+          <div class="flex gap-2 items-center">
+            <h2 class="text-3xl font-semibold text-blue-500 dark:text-gray-100">Technologies</h2>
+          </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div v-for="(data, index) in Techs" :key="index"
                  class="p-6 rounded-xl bg-slate-100 dark:bg-gray-800 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-gray-700 dark:hover:to-gray-600 transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
@@ -89,7 +88,9 @@
         </div>
         <!-- Tools -->
         <div class="flex flex-col gap-6">
-          <h2 class="text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Tools</h2>
+          <div class="flex gap-2 items-center">
+            <h2 class="text-3xl font-semibold text-blue-500 dark:text-gray-100">Tools</h2>
+          </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div v-for="(data, index) in Tools" :key="index"
                  class="p-6 rounded-xl bg-slate-100 dark:bg-gray-800 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-gray-700 dark:hover:to-gray-600 transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
@@ -109,7 +110,7 @@
 </template>
 
 <script setup>
-import { ArrowUpRight, Send, Globe, Smartphone, SquarePen, Phone, Mail } from 'lucide-vue-next';
+import { ArrowUpRight, Send, Globe, Smartphone, SquarePen, Phone, Mail, Bookmark } from 'lucide-vue-next';
 import DarkMode from '~/components/DarkMode.vue';
 
 const media = [
