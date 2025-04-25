@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen">
-    <div class="p-2 max-w-5xl mx-auto flex flex-col gap-16 overflow-hidden mb-20">
+    <div class="p-4 max-w-5xl mx-auto flex flex-col gap-16 overflow-hidden mb-20">
       <!-- Introduce -->
       <div class="flex flex-col gap-8" data-aos="fade-up">
         <div class="flex flex-col gap-3">
@@ -25,41 +25,20 @@
       <!-- Project -->
       <div data-aos="fade-up" data-aos-delay="100" class="flex flex-col gap-2">
         <div class="flex items-center gap-2">
-          <Bookmark class="w-7 h-7 text-purple-500 fill-purple-500 dark:text-gray-100"/>
-          <h2 class="text-3xl font-bold text-purple-500 dark:text-gray-100">Projects</h2>
+          <Bookmark class="w-7 h-7 text-purple-500 fill-purple-500"/>
+          <h2 class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Projects</h2>
         </div>
         <div class="flex flex-col gap-1">
           <a v-for="(data, index) in project" :key="index" :href="data.link" target="_blank" rel="noopener noreferrer"
-             class="flex gap-2 p-2 rounded-xl bg-white dark:bg-gray-800 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-gray-700 dark:hover:to-gray-600 transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
-             <component :is="data.icon" class="w-5 h-5 text-blue-600 dark:text-gray-300" />
+             class="flex flex-col gap-2 p-2 rounded-xl bg-white dark:bg-gray-800 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-gray-700 dark:hover:to-gray-600 transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
              <div class="flex gap-2 items-center">
+               <component :is="data.icon" class="w-5 h-5 text-blue-600" />
               <p class="text-md font-bold text-gray-800 dark:text-gray-200">{{ data.title }}</p>
-              <p class="text-xs text-gray-600 dark:text-gray-400">{{ data.description }}</p>
             </div>
+            <p class="text-xs text-gray-600 dark:text-gray-400">{{ data.description }}</p>
           </a>
         </div>
       </div>
-
-      <!-- Blog -->
-      <div class="flex flex-col gap-8" data-aos="fade-up" data-aos-delay="200">
-        <div class="flex flex-col gap-3">
-          <div class="flex items-center gap-2">
-            <Bookmark class="w-7 h-7 text-purple-500 fill-purple-500 dark:text-gray-100"/>
-            <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Blog</h1>
-          </div>
-          <p class="text-gray-600 dark:text-gray-400">Stay tuned for my posts!</p>
-        </div>
-        <div class="flex flex-col gap-2">
-          <div v-for="n in 3" :key="n" class="p-2 flex gap-2 justify-between items-end rounded-lg bg-slate-50 cursor-pointer dark:bg-gray-800 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-gray-700 dark:hover:to-gray-600 transform hover:-translate-y-1 transition-all duration-300">
-            <div class="flex flex-col justify-center gap-2">
-              <p class="text-gray-600 dark:text-gray-400">Apr 27, 2024</p>
-              <p class="font-semibold text-gray-800 dark:text-gray-200">Add beautiful maps to your React app with MapBox GL</p>
-            </div>
-            <SquarePen class="w-5 h-5 text-blue-600 dark:text-gray-300"/>
-          </div>
-        </div>
-      </div>
-
       <!-- Technologies & Tools -->
       <div class="flex flex-col gap-8" data-aos="fade-up" data-aos-delay="300">
         <div class="flex flex-col gap-3">
@@ -104,12 +83,14 @@
           </div>
         </div>
       </div>
+      <p class="text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Have a good day!</p>
     </div>
     <DarkMode />
   </div>
 </template>
 
 <script setup>
+import { NuxtLink } from '#components';
 import { ArrowUpRight, Send, Globe, Smartphone, SquarePen, Phone, Mail, Bookmark } from 'lucide-vue-next';
 import DarkMode from '~/components/DarkMode.vue';
 
@@ -118,7 +99,6 @@ const media = [
   // { link: 'https://www.tiktok.com/@jrsetup?lang=vi-VN', text: 'Tiktok'},
   { link: 'https://www.facebook.com/huyhoang203.phh/', text: 'Facebook' },
 ];
-
 const project = [
   {
     link: 'https://www.testbank.vn/',
@@ -134,19 +114,18 @@ const project = [
   },
 
 ];
-
 const Techs = [
   { name: "React Native", description: "A framework for building native apps using React.", link: "https://reactnative.dev/" },
   { name: "Nuxt.js", description: "A framework for creating Vue.js applications.", link: "https://nuxtjs.org/" },
   { name: ".NET Core", description: "A cross-platform framework for building modern, cloud-based, internet-connected applications.", link: "https://dotnet.microsoft.com/" },
   { name: "Git", description: "A distributed version control system.", link: "https://git-scm.com/" },
 ];
-
 const Tools = [
   { name: "Visual Studio Code", description: "A source-code editor made by Microsoft.", link: "https://code.visualstudio.com/" },
   { name: "MySQL Workbench", description: "A unified visual tool for database architects, developers, and DBAs.", link: "https://www.mysql.com/products/workbench/" },
   { name: "Rider", description: "A cross-platform .NET IDE by JetBrains.", link: "https://www.jetbrains.com/rider/" },
 ];
+
 </script>
 
 <style>

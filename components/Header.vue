@@ -27,6 +27,10 @@
       router: 'cv',
       text: 'CV',
     },
+    {
+      router: 'blog',
+      text: 'Blog',
+    },
   ]);
   </script>
   

@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen" data-aos="fade-up">
-    <div class="p-2 max-w-5xl flex flex-col gap-12 overflow-hidden mb-16">
+    <div class="p-4 max-w-5xl flex flex-col gap-12 overflow-hidden mb-16">
       <!-- Header -->
       <div class="">
         <div class="flex flex-col gap-4">
