@@ -3,8 +3,9 @@
     <div class="mx-auto max-w-[700px] min-h-screen overflow-hidden">
       <Header />
       <div class="page-container">
-        <NuxtPage v-slot="{ Component, route }">
+        <NuxtPage>
         </NuxtPage>
+        <DarkMode />
       </div>
     </div>
   </div>

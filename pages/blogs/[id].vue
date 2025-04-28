@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-3xl flex flex-col gap-12 mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <div v-if="post" class="max-w-3xl flex flex-col gap-12 mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <!-- Post Header -->
         <div class="" data-aos="fade-up" data-aos-duration="800">
             <div class="flex gap-2 items-center">
@@ -66,7 +66,7 @@ import { Calendar, User, Tags, ChevronRight, ArrowRight, ArrowLeft } from 'lucid
 import { posts } from '~/data/contents'
 const route = useRoute()
 const router = useRouter()
-
+const isRedirectNextPost = ref(false);
 // Lấy ID từ URL và convert sang number
 const id = Number(route.params.id)
 
@@ -76,6 +76,10 @@ const post = posts.find(p => p.id === id)
 if (!post) {
     // Nếu không tìm thấy thì redirect về 404
     router.replace('/404')
+} else {
+    if (post?.id < posts.length) {
+        isRedirectNextPost.value = true;
+    }
 }
 // Sample post data (can be passed via props or fetched from API)
 </script>

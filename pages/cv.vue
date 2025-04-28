@@ -245,7 +245,6 @@
       </div>
     </div>
   </div>
-  <DarkMode />
 </template>
 
 <script setup>
